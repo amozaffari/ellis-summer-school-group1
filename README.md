@@ -11,6 +11,15 @@ The LAI (Leaf Area Index) data is located in: `/ptmp/mp002/ellis/lai/lai/`
 - Each file contains 24 half-monthly composites (15-day periods)
 - Resolution: 1440x720 global grid
 
+## Produced Data
+
+### Generated Outputs
+All generated outputs are stored in `/ptmp/mp040/outputdir/` and are accessible to everyone:
+
+- **`clim/`** - Contains climatology data (1982-2017 average LAI values)
+- **`anom/`** - Contains anomaly and z-score data for LAI relative to the climatology
+
+
 ## Project Accomplishments
 
 ### Data Analysis (`climatology.ipynb`)
