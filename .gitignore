@@ -1,2 +1,4 @@
 env/
 pipeline/job.*
+preprocessing/out*
+preprocessing/err*

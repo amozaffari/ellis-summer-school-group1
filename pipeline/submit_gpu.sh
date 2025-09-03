@@ -44,4 +44,4 @@ export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHON
 
 #python ./train.py
 #python ./train_1.py
-python ./train_2.py
+python ./train.py
