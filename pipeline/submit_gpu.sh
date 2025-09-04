@@ -25,7 +25,7 @@
 # #SBATCH --cpus-per-task=72
 # #SBATCH --mem=500000
 #
-#SBATCH --time=1:00:00    # run for 1 hour
+#SBATCH --time=01:00:00    # run for 1 hour
 
 module purge
 module load gcc/10 impi/2021.2
@@ -42,6 +42,13 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 conda activate ellis
 export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHONPATH
 
-#python ./train.py
-#python ./train_1.py
-python ./train_2.py
+
+#python ./train.py #tinny cnn with hardcoded config 
+
+#python ./train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/inputs/training_tinycnn.json
+
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_cnn.json
+
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_linear.json
+
+python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_lstm.json
