@@ -25,7 +25,7 @@
 # #SBATCH --cpus-per-task=72
 # #SBATCH --mem=500000
 #
-#SBATCH --time=1:00:00    # run for 1 hour
+#SBATCH --time=0:10:00    # run for 1 hour
 
 module purge
 module load gcc/10 impi/2021.2
@@ -44,4 +44,12 @@ export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHON
 
 #python ./train.py
 #python ./train_1.py
-python ./train.py
+#python ./train.py
+
+python train_multi.py --config configs/config_tinycnn.json
+
+# python train_multi.py --config configs/config_deepercnn.json
+
+# python train_multi.py --config configs/config_linear.json
+
+# python train_multi.py --config configs/config_convlstm.json

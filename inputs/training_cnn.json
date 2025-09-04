@@ -1,0 +1,27 @@
+{
+  "splits": {
+    "train_years": [1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009],
+    "val_years":   [2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017]
+  },
+  "data": {
+    "era5_mode": "raw",
+    "lai_mode":  "raw",
+    "paths": {
+      "era5_root": "/ptmp/mp002/ellis/lai",
+      "era5_anom_dir": "/ptmp/mp040/outputdir/era5/anom",
+      "lai_root": "/ptmp/mp002/ellis/lai/lai",
+      "lai_tmpl": "LAI.1440.720.{year}.nc"
+    },
+    "engine": "netcdf4"
+  },
+  "training": {
+    "model_name": "deepercnn",
+    "epochs": 2,
+    "seq_len_samples": 48,
+    "seq_stride": 24,
+    "feature_layout": "time_channels",
+    "target_mode": "last",
+    "batch_size": 1,
+    "shuffle": true
+  }
+}
