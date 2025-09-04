@@ -42,14 +42,13 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 conda activate ellis
 export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHONPATH
 
-#python ./train.py
-#python ./train_1.py
-#python ./train.py
 
-python train_multi.py --config configs/config_tinycnn.json
+#python ./train.py #tinny cnn with hardcoded config 
 
-# python train_multi.py --config configs/config_deepercnn.json
+python train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/input/training_tinycnn.json
 
-# python train_multi.py --config configs/config_linear.json
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_cnn.json
 
-# python train_multi.py --config configs/config_convlstm.json
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_linear.json
+
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_lstm.json
