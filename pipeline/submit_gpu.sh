@@ -25,7 +25,7 @@
 # #SBATCH --cpus-per-task=72
 # #SBATCH --mem=500000
 #
-#SBATCH --time=0:10:00    # run for 1 hour
+#SBATCH --time=01:00:00    # run for 1 hour
 
 module purge
 module load gcc/10 impi/2021.2
@@ -45,10 +45,10 @@ export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHON
 
 #python ./train.py #tinny cnn with hardcoded config 
 
-python ./train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/input/training_tinycnn.json
+python ./train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/inputs/training_tinycnn.json
 
-#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_cnn.json
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_cnn.json
 
-#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_linear.json
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_linear.json
 
-#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_lstm.json
+#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_lstm.json

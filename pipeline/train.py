@@ -254,7 +254,7 @@ if __name__ == "__main__":
     print("-" * 33)
     opt = torch.optim.Adam(model.parameters(), lr=1e-3)
     scaler = GradScaler() if device.type == "cuda" else None
-    EPOCHS = 100
+    EPOCHS = 10
     ckpt_path = os.path.join(script_dir, "tinycnn_ckpt.pt")
     loss_history = {"train": [], "val": []}
     def epoch_loop(loader, train=True, epoch_num=0, total_epochs=0):
