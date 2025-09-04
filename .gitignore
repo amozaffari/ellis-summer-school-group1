@@ -1,4 +1,5 @@
 env/
+/models/outputs/*
 pipeline/job.*
 preprocessing/out*
 preprocessing/err*
