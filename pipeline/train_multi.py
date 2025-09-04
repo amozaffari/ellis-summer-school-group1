@@ -204,7 +204,7 @@ class ConvLSTMCell(nn.Module):
         )
 
 class ConvLSTM(nn.Module):
-    def __init__(self, in_ch, hidden_ch=64, out_ch=1, kernel_size=3):
+    def __init__(self, in_ch, hidden_ch=16, out_ch=1, kernel_size=3):
         super().__init__()
         self.cell = ConvLSTMCell(in_ch, hidden_ch, kernel_size)
         self.final_conv = nn.Conv2d(hidden_ch, out_ch, kernel_size=1)

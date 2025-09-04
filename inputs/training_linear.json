@@ -16,7 +16,7 @@
   },
   "training": {
     "model_name": "linear",
-    "epochs": 10,
+    "epochs": 20,
     "seq_len_samples": 48,
     "seq_stride": 24,
     "feature_layout": "time_channels",
