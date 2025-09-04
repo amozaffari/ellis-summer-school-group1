@@ -45,10 +45,10 @@ export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHON
 
 #python ./train.py #tinny cnn with hardcoded config 
 
-python ./train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/inputs/training_tinycnn.json
+#python ./train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/inputs/training_tinycnn.json
 
 #python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_cnn.json
 
 #python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_linear.json
 
-#python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_lstm.json
+python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/inputs/training_lstm.json
