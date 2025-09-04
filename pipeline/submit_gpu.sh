@@ -45,7 +45,7 @@ export PYTHONPATH=/u/mp040/conda-envs/ellis/lib/python3.12/site-packages:$PYTHON
 
 #python ./train.py #tinny cnn with hardcoded config 
 
-python train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/input/training_tinycnn.json
+python ./train_multi.py --config  /ptmp/$USER/ellis-summer-school-group1/input/training_tinycnn.json
 
 #python train_multi.py --config /ptmp/$USER/ellis-summer-school-group1/input/training_cnn.json
 
